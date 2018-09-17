@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apollo Hapi test</title>
+  </head>
+  <body>
+    <form action="http://localhost:4000/graphql" method="POST">
+      <input type="hidden" name="operations" value='{"operationName":"UploadFile","variables":{"file":null},"query":"mutation UploadFile($file: Upload!) { uploadFile(file: $file) { filename } }"}' />
+      <input type="hidden" name="map" value='{"0":["variables.file"]}' />
+      <input type="file" required name="0" accept="jpg,jpeg,png,pdf" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
